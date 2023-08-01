@@ -27,7 +27,7 @@ return res.status(400).json({message: "invalid login details"})
     
     const access_token =  jwt.sign({user: user.username}, access_secret)
 
-    res.cookie('_access_token_', access_token, {path:"/", sameSite:"lax", maxAge:1000*60*60*8})
+    res.cookie('_access_token_', access_token, {path:"/", sameSite:"none", maxAge:1000*60*60*8})
 return res.status(200).json({message:"login success"})    
 
 } catch (error) {
