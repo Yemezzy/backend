@@ -12,7 +12,7 @@ const PORT = process.env.PORT;
 
 app.use(
   cors({
-    origin: "https://investor-grainn.vercel.app/",
+    origin: "https://investor-grainn.vercel.app",
     credentials: true,
   })
 );
@@ -20,7 +20,7 @@ app.use(
 app.use(function (req, res, next) {
   res.header(
     "Access-Control-Allow-Origin",
-    "https://investor-grainn.vercel.app/"
+    "https://investor-grainn.vercel.app"
   );
   res.header(
     "Access-Control-Allow-Methods",
