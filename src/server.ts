@@ -12,7 +12,8 @@ const PORT = process.env.PORT;
 
 app.use(
   cors({
-    origin: "https://investor-grainn.vercel.app",
+    // origin: "https://investor-grainn.vercel.app",
+    origin: "http://localhost:3000",
     credentials: true,
   })
 );
