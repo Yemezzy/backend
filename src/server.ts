@@ -21,7 +21,8 @@ app.use(
 app.use(function (req, res, next) {
   res.header(
     "Access-Control-Allow-Origin",
-    "https://investor-grainn.vercel.app"
+    // "https://investor-grainn.vercel.app"
+    "http://localhost:3000"
   );
   res.header(
     "Access-Control-Allow-Methods",
