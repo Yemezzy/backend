@@ -28,7 +28,7 @@ const createOrder = async (
     const { link, order_id, charge } = req.body;
 
     if (!link || !order_id || !charge) {
-      return res.status(400).json({ message: "some fields are missing" });
+      return res.status(400).json({ message: "Empty Inputs" });
     }
 
     if (!schema.safeParse({ link, order_category_id:order_id, charge }).success) {
