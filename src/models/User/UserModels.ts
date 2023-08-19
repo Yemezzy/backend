@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
 import { IUserDocument } from "./UserTypes";
+import { string } from "zod";
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema(
