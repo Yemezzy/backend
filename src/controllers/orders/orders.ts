@@ -22,7 +22,7 @@ const createOrder = async (
     
     if (!req.user) {
       
-      return res.status(400).json({ message: "you are not logged in" });
+      return res.status(400).json({ message: "you are not logged in " });
     }
 
     const { link, order_id, charge } = req.body;
@@ -72,7 +72,7 @@ const updateOrder = async (
   try {
     const { orderid, status, username, amount } = req.body;
     if (!req.isAdmin) {
-      return res.status(403).json({ message: "you are not authorised" });
+      return res.status(403).json({ message: "you are not authorised - LOGIN" });
     }
 
     if (!orderid || !status || !username) {
@@ -120,7 +120,7 @@ const getAllorders = async (
 ) => {
   try {
     if (!req.user) {
-      return res.status(403).json({ message: "you are not authorised" });
+      return res.status(403).json({ message: "you are not logged in" });
     }
 
     const orders = await OrderModel.find().populate('user', '-password').populate('order_category_id');
