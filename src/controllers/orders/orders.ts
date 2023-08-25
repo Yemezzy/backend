@@ -120,7 +120,7 @@ const getAllorders = async (
 ) => {
   try {
     if (!req.user) {
-      return res.status(403).json({ message: "you are not logged in" });
+      return res.status(403).json({ message: "you are not logged" });
     }
 
     const orders = await OrderModel.find().populate('user', '-password').populate('order_category_id');
