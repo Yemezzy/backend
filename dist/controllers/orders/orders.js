@@ -55,7 +55,7 @@ const createOrder = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
         });
         user.save();
         newOrder.save();
-        res.status(200).json({ message: "success" });
+        res.status(200).json({ message: "Order placed Successfully" });
     }
     catch (error) {
         console.log(error);
@@ -87,7 +87,7 @@ const updateOrder = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
         order.balance = newbalance;
         order.status = status;
         order.save();
-        return res.status(200).json({ message: "success" });
+        return res.status(200).json({ message: "Order placed Successfully" });
     }
     catch (error) {
         return res.status(500).json({ message: "internal server error" });

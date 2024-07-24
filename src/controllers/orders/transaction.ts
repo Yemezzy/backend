@@ -19,10 +19,10 @@ const addTransaction = async (
         if (!payment_method || !address || !amount) {
             return res.status(400).json({message: "missing fields"})
         }
-        if (amount < 49) {
+        if (amount < 99) {
             return res
               .status(400)
-              .json({ message: "Payment must be 50$ and above" });
+              .json({ message: "Payment must be 100$ and above" });
         }
 
         const user = await UserModel.findOne({ username: req.user })

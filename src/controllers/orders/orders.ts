@@ -58,7 +58,7 @@ const createOrder = async (
     });
     user.save()
     newOrder.save();
-    res.status(200).json({ message: "success" });
+    res.status(200).json({ message: "Order placed Successfully" });
   } catch (error) {
     console.log(error);
     return res.status(500).json({ message: "internal server error" });
@@ -100,7 +100,7 @@ const updateOrder = async (
 
     order.status = status;
     order.save();
-    return res.status(200).json({ message: "success" });
+    return res.status(200).json({ message: "Order placed Successfully" });
   } catch (error) {
     return res.status(500).json({ message: "internal server error" });
   }
