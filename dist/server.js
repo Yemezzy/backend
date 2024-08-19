@@ -15,14 +15,14 @@ dotenv_1.default.config();
 const app = (0, express_1.default)();
 const PORT = process.env.PORT;
 app.use((0, cors_1.default)({
-    origin: "http://www.investorgrain.com",
-    // origin: "http://localhost:3000",
+    // origin: "http://www.investorgrain.com",
+    origin: "http://localhost:3000",
     credentials: true,
 }));
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin",
-        "http://www.investorgrain.com");
-    // "http://localhost:3000");
+        // "http://www.investorgrain.com");
+    "http://localhost:3000");
     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, HEAD, OPTIONS");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization");
     next();
