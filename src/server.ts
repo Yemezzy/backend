@@ -12,8 +12,8 @@ const PORT = process.env.PORT;
 
 app.use(
   cors({
-    origin: "https://www.investorgrain.com",
-    // origin: "http://localhost:3000",
+    // origin: "https://www.investorgrain.com",
+    origin: "http://localhost:3000",
     credentials: true,
   })
 );
@@ -21,8 +21,8 @@ app.use(
 app.use(function (req, res, next) {
   res.header(
     "Access-Control-Allow-Origin",
-    "https://www.investorgrain.com"
-    // "http://localhost:3000"
+    // "https://www.investorgrain.com"
+    "http://localhost:3000"
   );
   res.header(
     "Access-Control-Allow-Methods",
